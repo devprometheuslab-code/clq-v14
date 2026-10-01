@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bouton mode DUO - vert neon arcade -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Halo glow externe -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+            <solid android:color="#3300FF6E"/>
+        </shape>
+    </item>
+    <!-- Corps du bouton -->
+    <item
+        android:left="3dp"
+        android:right="3dp"
+        android:top="3dp"
+        android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="18dp"/>
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="#1B5E20"
+                android:centerColor="#2E7D32"
+                android:endColor="#1B5E20"/>
+            <stroke android:width="2dp" android:color="#76FF03"/>
+        </shape>
+    </item>
+</layer-list>

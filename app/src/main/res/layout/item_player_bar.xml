@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mini player indicator for the top player bar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutPlayerItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingHorizontal="6dp"
+    android:paddingVertical="4dp"
+    android:background="@drawable/bg_player_item"
+    android:layout_marginEnd="8dp">
+
+    <!-- Avatar frame with glow for active player -->
+    <FrameLayout
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Active player glow ring -->
+        <View
+            android:id="@+id/viewActiveGlow"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_active_glow"
+            android:visibility="gone" />
+
+        <!-- Avatar image -->
+        <ImageView
+            android:id="@+id/ivMiniAvatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <!-- Player name -->
+    <TextView
+        android:id="@+id/tvMiniName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joueur"
+        android:textSize="10sp"
+        android:textColor="@color/text_primary"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxWidth="60dp"
+        android:gravity="center"
+        android:layout_marginTop="2dp" />
+
+    <!-- Score or PV -->
+    <TextView
+        android:id="@+id/tvMiniScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 pts"
+        android:textSize="9sp"
+        android:textColor="@color/neon_gold"
+        android:gravity="center" />
+
+    <!-- Streak + WP mini indicators (NOUVEAU) -->
+    <TextView
+        android:id="@+id/tvMiniStreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:textColor="@color/neon_cyan"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvMiniWP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:textColor="#E040FB"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <!-- Mini PV bar (Glou mode) -->
+    <ProgressBar
+        android:id="@+id/progressMiniPV"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="48dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="2dp"
+        android:max="30"
+        android:progress="30"
+        android:progressDrawable="@drawable/progress_pv_mini"
+        android:visibility="gone" />
+
+    <!-- Eliminated overlay text -->
+    <TextView
+        android:id="@+id/tvMiniEliminated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="☠️"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:gravity="center" />
+
+</LinearLayout>

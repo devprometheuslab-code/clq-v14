@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bouton mode CASH - rouge neon arcade -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+            <solid android:color="#33FF1744"/>
+        </shape>
+    </item>
+    <item
+        android:left="3dp"
+        android:right="3dp"
+        android:top="3dp"
+        android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="18dp"/>
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="#7F0000"
+                android:centerColor="#B71C1C"
+                android:endColor="#7F0000"/>
+            <stroke android:width="2dp" android:color="#FF5252"/>
+        </shape>
+    </item>
+</layer-list>

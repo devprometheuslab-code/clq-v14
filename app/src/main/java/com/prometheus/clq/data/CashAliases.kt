@@ -1,0 +1,250 @@
+package com.prometheus.clq.data
+
+/**
+ * Aliases communs pour le mode Cash
+ * Permet d'accepter plusieurs formulations valides
+ * Ex: "USA" accepte pour "Etats-Unis", "CR7" pour "Cristiano Ronaldo"
+ */
+object CashAliases {
+    
+    // Map: réponse normalisée -> liste d'alternatives acceptées
+    private val aliases: Map<String, List<String>> = mapOf(
+        // === PAYS ===
+        "etats-unis" to listOf("usa", "us", "amerique", "etats unis", "united states"),
+        "royaume-uni" to listOf("uk", "angleterre", "grande-bretagne", "grande bretagne", "england"),
+        "pays-bas" to listOf("hollande", "pays bas", "netherlands"),
+        "coree du sud" to listOf("coree sud", "south korea"),
+        "coree du nord" to listOf("coree nord", "north korea"),
+        "republique tcheque" to listOf("tcheque", "tchequie", "czech"),
+        "arabie saoudite" to listOf("arabie", "saudi"),
+        "nouvelle-zelande" to listOf("nouvelle zelande", "nz", "new zealand"),
+        "afrique du sud" to listOf("south africa", "rsa"),
+        "cote d'ivoire" to listOf("cote divoire", "ivory coast"),
+        "emirats arabes unis" to listOf("emirats", "eau", "uae", "dubai"),
+        "bosnie-herzegovine" to listOf("bosnie", "bosnia"),
+        "trinite-et-tobago" to listOf("trinidad", "trinite"),
+        "republique democratique du congo" to listOf("rdc", "congo kinshasa"),
+        "papouasie-nouvelle-guinee" to listOf("papouasie", "png"),
+        
+        // === VILLES ===
+        "new york" to listOf("ny", "nyc", "new-york"),
+        "los angeles" to listOf("la", "l.a."),
+        "sao paulo" to listOf("sao paulo", "são paulo"),
+        "rio de janeiro" to listOf("rio"),
+        "saint-petersbourg" to listOf("saint petersbourg", "st petersbourg", "petrograd", "leningrad"),
+        "pekin" to listOf("beijing", "peking"),
+        "bombay" to listOf("mumbai"),
+        "calcutta" to listOf("kolkata"),
+        "istanbul" to listOf("constantinople", "byzance"),
+        
+        // === PERSONNAGES HISTORIQUES ===
+        "christiano ronaldo" to listOf("cr7", "ronaldo", "cristiano"),
+        "cristiano ronaldo" to listOf("cr7", "ronaldo", "cristiano"),
+        "lionel messi" to listOf("messi", "leo messi"),
+        "albert einstein" to listOf("einstein"),
+        "napoleon bonaparte" to listOf("napoleon", "bonaparte"),
+        "charles de gaulle" to listOf("de gaulle", "degaulle"),
+        "louis pasteur" to listOf("pasteur"),
+        "marie curie" to listOf("curie"),
+        "leonard de vinci" to listOf("de vinci", "vinci", "da vinci", "leonardo da vinci"),
+        "alexandre le grand" to listOf("alexandre", "alexander the great"),
+        "jules cesar" to listOf("cesar", "julius caesar"),
+        "genghis khan" to listOf("gengis khan", "temujin"),
+        "christophe colomb" to listOf("colomb", "columbus"),
+        "william shakespeare" to listOf("shakespeare"),
+        "wolfgang amadeus mozart" to listOf("mozart"),
+        "ludwig van beethoven" to listOf("beethoven"),
+        "isaac newton" to listOf("newton"),
+        "nelson mandela" to listOf("mandela"),
+        "martin luther king" to listOf("mlk", "luther king"),
+        "mahatma gandhi" to listOf("gandhi"),
+        "john f. kennedy" to listOf("jfk", "kennedy"),
+        "george washington" to listOf("washington"),
+        "abraham lincoln" to listOf("lincoln"),
+        "winston churchill" to listOf("churchill"),
+        "adolf hitler" to listOf("hitler"),
+        "joseph staline" to listOf("staline", "stalin"),
+        "mao zedong" to listOf("mao", "mao tse-tung"),
+        "fidel castro" to listOf("castro"),
+        "che guevara" to listOf("guevara", "ernesto guevara"),
+        "thomas edison" to listOf("edison"),
+        "nikola tesla" to listOf("tesla"),
+        "galilee" to listOf("galileo", "galileo galilei"),
+        "copernic" to listOf("copernicus", "nicolas copernic"),
+        "charles darwin" to listOf("darwin"),
+        "sigmund freud" to listOf("freud"),
+        "pablo picasso" to listOf("picasso"),
+        "vincent van gogh" to listOf("van gogh", "gogh"),
+        "claude monet" to listOf("monet"),
+        "rembrandt" to listOf("rembrandt van rijn"),
+        "michel-ange" to listOf("michelangelo", "michel ange"),
+        "neil armstrong" to listOf("armstrong"),
+        "yuri gagarin" to listOf("gagarine", "gagarin"),
+        "marco polo" to listOf("polo"),
+        "vasco de gama" to listOf("de gama", "gama"),
+        "hernan cortes" to listOf("cortes", "cortez"),
+        "louis xiv" to listOf("roi soleil", "louis 14"),
+        "louis xvi" to listOf("louis 16"),
+        "henri iv" to listOf("henri 4"),
+        "francois ier" to listOf("francois 1er", "francois premier", "francois 1"),
+        "victor hugo" to listOf("hugo"),
+        "emile zola" to listOf("zola"),
+        "voltaire" to listOf("francois-marie arouet"),
+        "moliere" to listOf("jean-baptiste poquelin"),
+        "rene descartes" to listOf("descartes"),
+        "blaise pascal" to listOf("pascal"),
+        
+        // === FOOTBALLEURS ===
+        "zinedine zidane" to listOf("zidane", "zizou"),
+        "kylian mbappe" to listOf("mbappe"),
+        "neymar jr" to listOf("neymar"),
+        "erling haaland" to listOf("haaland"),
+        "robert lewandowski" to listOf("lewandowski", "lewy"),
+        "karim benzema" to listOf("benzema"),
+        "luka modric" to listOf("modric"),
+        "antoine griezmann" to listOf("griezmann", "grizi"),
+        "paul pogba" to listOf("pogba"),
+        "eden hazard" to listOf("hazard"),
+        "gareth bale" to listOf("bale"),
+        "thierry henry" to listOf("henry"),
+        "ronaldinho" to listOf("ronaldinho gaucho"),
+        "diego maradona" to listOf("maradona"),
+        "pele" to listOf("edson arantes", "roi pele"),
+        "johan cruyff" to listOf("cruyff", "cruijff"),
+        "franz beckenbauer" to listOf("beckenbauer", "kaiser"),
+        "alfredo di stefano" to listOf("di stefano"),
+        "michel platini" to listOf("platini"),
+        "just fontaine" to listOf("fontaine"),
+        "raymond kopa" to listOf("kopa"),
+        
+        // === CLUBS ===
+        "real madrid" to listOf("real", "madrid"),
+        "fc barcelone" to listOf("barca", "barcelone", "barcelona"),
+        "manchester united" to listOf("man utd", "man u", "united"),
+        "manchester city" to listOf("man city", "city"),
+        "paris saint-germain" to listOf("psg", "paris sg", "paris"),
+        "juventus" to listOf("juve", "juventus turin"),
+        "bayern munich" to listOf("bayern", "fcb"),
+        "atletico madrid" to listOf("atletico", "atleti"),
+        "inter milan" to listOf("inter", "internazionale"),
+        "ac milan" to listOf("milan", "milan ac", "rossoneri"),
+        "olympique de marseille" to listOf("om", "marseille"),
+        "olympique lyonnais" to listOf("ol", "lyon"),
+        "borussia dortmund" to listOf("dortmund", "bvb"),
+        "tottenham" to listOf("tottenham hotspur", "spurs"),
+        "arsenal" to listOf("arsenal fc", "gunners"),
+        "chelsea" to listOf("chelsea fc", "blues"),
+        "liverpool" to listOf("liverpool fc", "reds"),
+        "benfica" to listOf("sl benfica", "benfica lisbonne"),
+        "porto" to listOf("fc porto"),
+        "ajax" to listOf("ajax amsterdam"),
+        "celtic" to listOf("celtic glasgow"),
+        "rangers" to listOf("rangers glasgow"),
+        
+        // === COMPETITIONS ===
+        "ligue des champions" to listOf("champions league", "ucl", "c1"),
+        "ligue europa" to listOf("europa league", "c3"),
+        "coupe du monde" to listOf("world cup", "mondial", "cdm"),
+        "championnat d'europe" to listOf("euro", "championnat europe"),
+        "copa america" to listOf("copa"),
+        "coupe d'afrique des nations" to listOf("can", "coupe afrique"),
+        "ballon d'or" to listOf("ballon or"),
+        
+        // === ORGANISATIONS ===
+        "organisation des nations unies" to listOf("onu", "nations unies", "un"),
+        "union europeenne" to listOf("ue", "eu"),
+        "organisation mondiale de la sante" to listOf("oms", "who"),
+        "fonds monetaire international" to listOf("fmi", "imf"),
+        "organisation du traite de l'atlantique nord" to listOf("otan", "nato"),
+        
+        // === SCIENCE ===
+        "dioxyde de carbone" to listOf("co2", "gaz carbonique"),
+        "monoxyde de carbone" to listOf("co"),
+        "acide desoxyribonucleique" to listOf("adn", "dna"),
+        "acide ribonucleique" to listOf("arn", "rna"),
+        "h2o" to listOf("eau", "water"),
+        "vitesse de la lumiere" to listOf("c", "300000 km/s", "299792"),
+        "nombre d'avogadro" to listOf("avogadro", "6.022e23"),
+        "tableau periodique" to listOf("table de mendeleiev", "tableau de mendeleiev", "tableau periodique des elements"),
+        
+        // === CULTURE ===
+        "premiere guerre mondiale" to listOf("ww1", "wwi", "guerre 14-18", "grande guerre", "1ere guerre mondiale"),
+        "seconde guerre mondiale" to listOf("ww2", "wwii", "guerre 39-45", "2eme guerre mondiale", "deuxieme guerre mondiale"),
+        "revolution francaise" to listOf("revolution de 1789", "1789"),
+        "declaration des droits de l'homme" to listOf("ddhc", "droits de l'homme"),
+        
+        // === ARTICLES ===
+        // Common answers with Le/La/Les/L' that should also be accepted without
+        "le bresil" to listOf("bresil", "brazil"),
+        "la france" to listOf("france"),
+        "le japon" to listOf("japon", "japan"),
+        "la chine" to listOf("chine", "china"),
+        "le canada" to listOf("canada"),
+        "le mexique" to listOf("mexique", "mexico"),
+        "la russie" to listOf("russie", "russia"),
+        "l'allemagne" to listOf("allemagne", "germany"),
+        "l'italie" to listOf("italie", "italy"),
+        "l'espagne" to listOf("espagne", "spain"),
+        "le portugal" to listOf("portugal"),
+        "la belgique" to listOf("belgique"),
+        "la suisse" to listOf("suisse"),
+        "le maroc" to listOf("maroc"),
+        "l'algerie" to listOf("algerie"),
+        "la tunisie" to listOf("tunisie"),
+        "le senegal" to listOf("senegal"),
+        "le cameroun" to listOf("cameroun"),
+        "l'egypte" to listOf("egypte"),
+        "l'inde" to listOf("inde", "india"),
+        "l'australie" to listOf("australie", "australia"),
+        "l'argentine" to listOf("argentine", "argentina"),
+        "le perou" to listOf("perou", "peru"),
+        "la colombie" to listOf("colombie", "colombia"),
+        "le chili" to listOf("chili", "chile"),
+        "le venezuela" to listOf("venezuela"),
+        "la turquie" to listOf("turquie", "turkey"),
+        "l'iran" to listOf("iran"),
+        "l'irak" to listOf("irak", "iraq"),
+        "le pakistan" to listOf("pakistan"),
+        "la grece" to listOf("grece", "greece"),
+        "la pologne" to listOf("pologne", "poland"),
+        "la roumanie" to listOf("roumanie", "romania"),
+        "la hongrie" to listOf("hongrie", "hungary"),
+        "la suede" to listOf("suede", "sweden"),
+        "la norvege" to listOf("norvege", "norway"),
+        "le danemark" to listOf("danemark", "denmark"),
+        "la finlande" to listOf("finlande", "finland"),
+        "l'autriche" to listOf("autriche", "austria"),
+        "le soleil" to listOf("soleil", "sun"),
+        "la lune" to listOf("lune", "moon"),
+        "la terre" to listOf("terre", "earth"),
+        "le coeur" to listOf("coeur", "heart"),
+        "le cerveau" to listOf("cerveau", "brain"),
+        "le femur" to listOf("femur"),
+        "le pancreas" to listOf("pancreas"),
+        "la peau" to listOf("peau"),
+        "la gravite" to listOf("gravite", "gravity"),
+        "l'oxygene" to listOf("oxygene", "o2", "oxygen"),
+        "l'azote" to listOf("azote", "n2", "nitrogen"),
+        "l'hydrogene" to listOf("hydrogene", "h2", "hydrogen"),
+        "le fer" to listOf("fer", "fe", "iron"),
+        "l'or" to listOf("or", "au", "gold"),
+        "l'argent" to listOf("argent", "ag", "silver"),
+        "le cuivre" to listOf("cuivre", "cu", "copper")
+    )
+
+    /** Normalize lookup keys and typed text consistently, including accents and punctuation. */
+    fun normalize(text: String): String = java.text.Normalizer.normalize(
+        text.lowercase(java.util.Locale.ROOT).replace("œ", "oe").replace("æ", "ae"),
+        java.text.Normalizer.Form.NFKD
+    ).replace(Regex("\\p{M}+"), "")
+        .replace(Regex("[^a-z0-9]+"), " ").trim()
+
+    private val normalizedAliases by lazy {
+        aliases.entries.groupBy { normalize(it.key) }.mapValues { (_, entries) ->
+            entries.flatMap { it.value }.distinct()
+        }
+    }
+
+    fun alternativesFor(answer: String): List<String> =
+        normalizedAliases[normalize(answer)].orEmpty()
+}

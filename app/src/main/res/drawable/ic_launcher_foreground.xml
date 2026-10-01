@@ -1,0 +1,71 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Trophy cup body -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M38,38 L70,38 L66,62 C65,67 60,72 54,72 C48,72 43,67 42,62 Z" />
+
+    <!-- Trophy left handle -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M38,40 C32,40 28,44 28,50 C28,56 32,60 38,60"
+        android:strokeWidth="3"
+        android:strokeColor="#FFD700"
+        android:fillAlpha="0" />
+
+    <!-- Trophy right handle -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M70,40 C76,40 80,44 80,50 C80,56 76,60 70,60"
+        android:strokeWidth="3"
+        android:strokeColor="#FFD700"
+        android:fillAlpha="0" />
+
+    <!-- Trophy base stem -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M50,72 L58,72 L56,78 L52,78 Z" />
+
+    <!-- Trophy base plate -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M44,78 L64,78 L66,82 L42,82 Z" />
+
+    <!-- Letter C -->
+    <path
+        android:fillColor="#0A0A2E"
+        android:pathData="M42,50 C42,46 44.5,43 48,43 L48,47 C46.5,47 46,48.5 46,50 C46,51.5 46.5,53 48,53 L48,57 C44.5,57 42,54 42,50 Z" />
+
+    <!-- Letter L -->
+    <path
+        android:fillColor="#0A0A2E"
+        android:pathData="M50,43 L54,43 L54,53 L58,53 L58,57 L50,57 Z" />
+
+    <!-- Letter Q -->
+    <path
+        android:fillColor="#0A0A2E"
+        android:pathData="M60,50 C60,46 62.5,43 66,43 C69.5,43 72,46 72,50 C72,54 69.5,57 66,57 C62.5,57 60,54 60,50 Z M64,50 C64,52 65,53 66,53 C67,53 68,52 68,50 C68,48 67,47 66,47 C65,47 64,48 64,50 Z M67,55 L70,58 L68,60 L65,57 Z" />
+
+    <!-- Neon glow accent top -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M40,36 L68,36 L70,38 L38,38 Z"
+        android:fillAlpha="0.8" />
+
+    <!-- Star left -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M34,34 L35.5,31 L37,34 L34,32.5 L37,32.5 Z"
+        android:fillAlpha="0.9" />
+
+    <!-- Star right -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M71,34 L72.5,31 L74,34 L71,32.5 L74,32.5 Z"
+        android:fillAlpha="0.9" />
+
+</vector>

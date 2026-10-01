@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Champion League Quizz</string>
+    <string name="tagline">Technology from gods</string>
+    <string name="brand">Prometheus Technology</string>
+
+    <!-- Main Menu -->
+    <string name="btn_play">JOUER</string>
+    <string name="btn_rules">Règles</string>
+    <string name="btn_records">Records</string>
+    <string name="btn_settings">Options</string>
+    <string name="resume_game">Reprendre la partie</string>
+    <string name="resume_game_details">%1$s · %2$s · question %3$d sur %4$d</string>
+    <plurals name="resume_players">
+        <item quantity="one">%d joueur</item>
+        <item quantity="other">%d joueurs</item>
+    </plurals>
+    <string name="new_game_title">Commencer une nouvelle partie ?</string>
+    <string name="new_game_message">La partie sauvegardée sera remplacée au lancement de la nouvelle partie.</string>
+    <string name="new_game_continue">Nouvelle partie</string>
+    <string name="cancel">Annuler</string>
+    <string name="pause_title">Partie en pause</string>
+    <string name="pause_message">Le chrono est arrêté. Reprends maintenant ou sauvegarde pour jouer plus tard.</string>
+    <string name="save_and_home">Sauvegarder et accueil</string>
+    <string name="abandon_game">Abandonner</string>
+    <string name="abandon_title">Abandonner cette partie ?</string>
+    <string name="abandon_message">La sauvegarde sera effacée et les résultats ne seront pas enregistrés.</string>
+    <string name="save_failed">La sauvegarde a échoué. Libère de l’espace sur l’appareil puis réessaie.</string>
+    <string name="resume_failed">Cette sauvegarde ne peut pas être reprise. Tu peux lancer une nouvelle partie.</string>
+
+    <!-- Setup -->
+    <string name="setup_title">Configuration</string>
+    <string name="setup_players_title">Joueurs</string>
+    <string name="setup_mode_title">Mode de jeu</string>
+    <string name="setup_category_title">Catégorie</string>
+    <string name="setup_questions_title">Questions par joueur</string>
+    <string name="setup_time_title">Temps par question (sec)</string>
+    <string name="setup_level_title">Niveau : %d</string>
+    <string name="setup_start">LANCER LA PARTIE</string>
+    <string name="setup_min_players">Minimum 1 joueur !</string>
+
+    <!-- Game -->
+    <string name="game_progress">Q %1$d / %2$d</string>
+    <string name="game_player_turn">Tour de %1$s</string>
+    <string name="game_score">%1$d pts</string>
+    <string name="game_choose_mode">Choisis ton mode de réponse</string>
+    <string name="game_next">Question suivante</string>
+    <string name="game_time_up">Temps écoulé</string>
+    <string name="game_cash_hint">Tape ta réponse...</string>
+    <string name="game_cash_submit">Valider</string>
+
+    <!-- Response modes -->
+    <string name="mode_duo">DUO</string>
+    <string name="mode_carre">CARRÉ</string>
+    <string name="mode_cash">CASH</string>
+    <string name="mode_duo_desc">2 choix • Sécurisé</string>
+    <string name="mode_carre_desc">4 choix • Intermédiaire</string>
+    <string name="mode_cash_desc">Réponse libre • Max risque</string>
+
+    <!-- Bonus -->
+    <string name="bonus_switch">Switch</string>
+    <string name="bonus_remove">Supprimer</string>
+    <string name="bonus_double">x2</string>
+
+    <!-- Results -->
+    <string name="results_title">Résultats</string>
+    <string name="results_winner">%s remporte la partie !</string>
+    <string name="results_play_again">Rejouer</string>
+    <string name="results_home">Accueil</string>
+    <string name="results_new_record">NOUVEAU RECORD !</string>
+
+    <!-- Glou -->
+    <string name="glou_pv">%d PV</string>
+    <string name="glou_eliminated">ÉLIMINÉ</string>
+    <string name="glou_last_standing">%s est le dernier debout !</string>
+
+    <!-- Records -->
+    <string name="records_title">Records</string>
+    <string name="record_best_score">Meilleur score</string>
+    <string name="record_best_streak">Meilleure série</string>
+    <string name="record_10pts">Record 10 pts</string>
+    <string name="record_15pts">Record 15 pts</string>
+    <string name="record_20pts">Record 20 pts</string>
+    <string name="record_fastest_death">Mort la plus rapide</string>
+    <string name="record_cash_accuracy">Précision Cash</string>
+    <string name="record_no_record">Aucun record</string>
+
+    <!-- Scoring Table -->
+    <string name="scoring_level_1">Niveau 1 • Safe</string>
+    <string name="scoring_level_2">Niveau 2 • Bonus série</string>
+    <string name="scoring_level_3">Niveau 3 • Piégeux</string>
+    <string name="scoring_level_4">Niveau 4 • Cash only</string>
+    <string name="scoring_level_5">Niveau 5 • Hardcore</string>
+</resources>

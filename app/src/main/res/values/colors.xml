@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CLQ Dark Neon/Cyber Theme -->
+    <color name="bg_primary">#0D0D1A</color>
+    <color name="bg_secondary">#141428</color>
+    <color name="bg_card">#1A1A35</color>
+    <color name="bg_surface">#1E1E3A</color>
+    <color name="bg_input">#252545</color>
+
+    <!-- Neon accents -->
+    <color name="neon_gold">#FFD700</color>
+    <color name="neon_blue">#00D4FF</color>
+    <color name="neon_purple">#B347FF</color>
+    <color name="neon_pink">#FF47AB</color>
+    <color name="neon_cyan">#00FFE0</color>
+
+    <!-- Response modes -->
+    <color name="duo_green">#00E676</color>
+    <color name="duo_green_dark">#00C853</color>
+    <color name="carre_yellow">#FFD740</color>
+    <color name="carre_yellow_dark">#FFC400</color>
+    <color name="cash_red">#FF1744</color>
+    <color name="cash_red_dark">#D50000</color>
+
+    <!-- Feedback colors -->
+    <color name="correct_green">#00E676</color>
+    <color name="correct_green_bg">#1B3A2A</color>
+    <color name="wrong_red">#FF1744</color>
+    <color name="wrong_red_bg">#3A1B1B</color>
+    <color name="timeout_orange">#FF9100</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0CC</color>
+    <color name="text_tertiary">#A4A4C2</color>
+    <color name="text_gold">#FFD700</color>
+
+    <!-- Buttons -->
+    <color name="btn_primary">#6200EE</color>
+    <color name="btn_primary_dark">#4A00B3</color>
+    <color name="btn_secondary">#2A2A55</color>
+    <color name="btn_default">#1E1E3A</color>
+    <color name="btn_disabled">#333355</color>
+
+    <!-- Glou mode -->
+    <color name="glou_beer">#FFA726</color>
+    <color name="glou_apocalypse">#FF1744</color>
+    <color name="glou_heal">#00E676</color>
+    <color name="glou_shield">#448AFF</color>
+
+    <!-- Legacy (keep for compatibility) -->
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gold">#FFD700</color>
+    <color name="bg_dark">#0D0D1A</color>
+</resources>

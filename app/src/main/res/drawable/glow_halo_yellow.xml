@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Halo radial jaune transparent pour effet glow derriere logo -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:type="radial"
+        android:gradientRadius="160"
+        android:startColor="#88FFD700"
+        android:centerColor="#33FFD700"
+        android:endColor="#00FFD700"/>
+</shape>

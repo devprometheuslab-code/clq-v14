@@ -1,0 +1,38 @@
+*.iml
+.gradle/
+.idea/
+**/build/
+/local.properties
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Secrets et signatures locales
+Keystores/
+keystore.properties
+*.jks
+*.keystore
+.env
+.env.*
+storeFile=*.txt
+
+# Livraisons disponibles dans les releases GitHub
+*.apk
+*.aab
+*.exe
+*.exe.config
+*.zip
+pc/dist/
+
+# Audits, sauvegardes et vérifications locales
+_audit/
+_verification/
+*.log
+*.bak
+baseline_manifest.json
+pc/pc_tests.txt
+pc/pc_ui_tests.txt
+pc/pc_ui_test_data/
+__pycache__/
+*.pyc
+scripts/cache/

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_arcade_main">
+
+    <!-- Glow halo derriere logo -->
+    <View
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:background="@drawable/glow_halo_yellow"
+        android:alpha="0.55"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Prometheus Logo - plus grand avec glow -->
+        <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:src="@drawable/prometheus_logo"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"/>
+
+        <!-- "PROMETHEUS TECHNOLOGY" texte arcade -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROMETHEUS TECHNOLOGY"
+            android:textColor="#FFD700"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.20"
+            android:fontFamily="sans-serif-black"
+            android:shadowColor="#FFD700"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:layout_marginTop="36dp"/>
+
+        <!-- "Champion League Quizz" subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◆  Champion League Quizz  ◆"
+            android:textColor="#00E5FF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:shadowColor="#00E5FF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="14"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Petite ligne loading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◇ INSERT COIN ◇"
+            android:textColor="#FF6EC7"
+            android:textSize="11sp"
+            android:letterSpacing="0.30"
+            android:layout_marginTop="40dp"
+            android:alpha="0.7"/>
+
+    </LinearLayout>
+
+</FrameLayout>

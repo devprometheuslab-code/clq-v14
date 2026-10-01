@@ -1,0 +1,21 @@
+CHAMPION LEAGUE QUIZZ — WINDOWS v14.2
+
+1. Extraire le contenu de CLQ_Windows_portable.zip dans un dossier.
+2. Garder CLQ_Windows.exe et CLQ_Windows.exe.config côte à côte.
+3. Ouvrir CLQ_Windows.exe.
+
+Le jeu utilise .NET Framework 4.8. Les questions sont embarquées : aucun
+téléchargement et aucune connexion ne sont nécessaires pour jouer.
+
+Créer une partie de 1 à 6 joueurs, choisir Classique ou Glou, une catégorie,
+le nombre de questions et le chrono. La partie se sauvegarde en quittant
+l’écran ou en fermant la fenêtre. Reprendre depuis l’accueil.
+
+Sauvegardes et records : %LOCALAPPDATA%\CLQWindows
+Les sauvegardes sont indépendantes de celles de la version Android.
+
+Cette adaptation reprend le quiz, les principaux bonus et les records.
+Les profils, avatars et certains événements Android sont propres au mobile.
+
+Code et téléchargements :
+https://github.com/devprometheuslab-code/clq-v14

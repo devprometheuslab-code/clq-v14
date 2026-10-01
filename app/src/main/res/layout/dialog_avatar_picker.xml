@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_arcade_main"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="◆ CHOISIS TON AVATAR ◆"
+        android:textColor="#FFD700"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.10"
+        android:gravity="center"
+        android:shadowColor="#FFD700"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="14"
+        android:layout_marginBottom="12dp"/>
+
+    <GridView
+        android:id="@+id/gridAvatars"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:padding="6dp"/>
+
+</LinearLayout>

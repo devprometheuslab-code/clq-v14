@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fond arcade main : gradient radial sombre + grille subtile -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="800"
+                android:centerX="0.5"
+                android:centerY="0.4"
+                android:startColor="#1A1A40"
+                android:centerColor="#0D0D20"
+                android:endColor="#000005"/>
+        </shape>
+    </item>
+</layer-list>

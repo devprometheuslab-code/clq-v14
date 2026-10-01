@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_arcade_main">
+
+    <!-- Halo glow violet en haut -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_gravity="top"
+        android:background="@drawable/glow_halo_yellow"
+        android:alpha="0.25"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- TITRE ARCADE avec double texte pour effet glow -->
+        <TextView
+            android:id="@+id/tvTitleShadow" android:importantForAccessibility="no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:clipToPadding="false"
+            android:text="CHAMPION\nLEAGUE QUIZZ"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#88FFD700"
+            android:gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.06"
+            android:shadowColor="#FFD700"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="32"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:clipToPadding="false"
+            android:text="CHAMPION\nLEAGUE QUIZZ"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFD700"
+            android:gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.06"
+            app:layout_constraintTop_toTopOf="@id/tvTitleShadow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Petit slogan arcade -->
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Un quiz. Ton défi. À vous de jouer."
+            android:textSize="13sp"
+            android:textColor="#FF6EC7"
+            android:letterSpacing="0.25"
+            android:textStyle="bold"
+            android:shadowColor="#FF6EC7"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="14"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/tvStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#90CAF9"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvSlogan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutResume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="12dp"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tvStats"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/tvResumeDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#B9D9F5"
+                android:textSize="14sp"
+                android:gravity="center"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:text="@string/resume_game"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                app:backgroundTint="#00E5FF"
+                app:cornerRadius="24dp"/>
+        </LinearLayout>
+
+        <!-- BOUTON JOUER massif arcade -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:text="▶  JOUER"
+            android:textSize="28sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            android:fontFamily="sans-serif-black"
+            android:background="@drawable/btn_neon_yellow"
+            app:backgroundTint="@null"
+            app:cornerRadius="40dp"
+            app:elevation="12dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutResume"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"/>
+
+        <!-- BOUTONS SECONDAIRES en grille 2x2 -->
+        <LinearLayout
+            android:id="@+id/secondaryGridRow1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toBottomOf="@id/btnPlay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRecords"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:text="🏆  RECORDS"
+                android:textSize="14sp"
+                android:textColor="#FFD700"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:background="@drawable/btn_neon_outlined"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp"
+                app:strokeColor="#FFD700"
+                app:strokeWidth="2dp"
+                android:layout_marginEnd="6dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfiles"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:text="👤  PROFILS"
+                android:textSize="14sp"
+                android:textColor="#FF6EC7"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:background="@drawable/btn_neon_outlined"
+                app:backgroundTint="@null"
+                app:cornerRadius="30dp"
+                app:strokeColor="#FF6EC7"
+                app:strokeWidth="2dp"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRules"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text="📖  RÈGLES DU JEU"
+            android:textSize="14sp"
+            android:textColor="#00E5FF"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:background="@drawable/btn_neon_outlined"
+            app:backgroundTint="@null"
+            app:cornerRadius="30dp"
+            app:strokeColor="#00E5FF"
+            app:strokeWidth="2dp"
+            app:layout_constraintTop_toBottomOf="@id/secondaryGridRow1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSound"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="🔊 SON"
+            android:textSize="13sp"
+            android:textColor="#90CAF9"
+            android:textStyle="bold"
+            app:backgroundTint="#0D0D1A"
+            app:cornerRadius="22dp"
+            app:strokeColor="#3F4F70"
+            app:strokeWidth="1dp"
+            app:layout_constraintTop_toBottomOf="@id/btnRules"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECORDS"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/neon_gold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvGlobalStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/text_tertiary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Best Score -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/neon_purple"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/record_best_score" android:textSize="13sp"
+                    android:textColor="@color/neon_cyan" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvRecordBestScore" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/neon_gold"/>
+                <TextView android:id="@+id/tvRecordBestScoreDetail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_tertiary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Best Streak -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/neon_purple"
+            app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/record_best_streak" android:textSize="13sp"
+                    android:textColor="@color/neon_cyan" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvRecordBestStreak" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/neon_gold"/>
+                <TextView android:id="@+id/tvRecordBestStreakDetail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_tertiary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Record 10pts -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="@color/neon_purple" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/record_10pts" android:textSize="13sp"
+                    android:textColor="@color/neon_cyan" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvRecord10" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/neon_gold"/>
+                <TextView android:id="@+id/tvRecord10Detail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_tertiary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Record 15pts -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="@color/neon_purple" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/record_15pts" android:textSize="13sp"
+                    android:textColor="@color/neon_cyan" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvRecord15" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/neon_gold"/>
+                <TextView android:id="@+id/tvRecord15Detail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_tertiary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Record 20pts -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="@color/neon_purple" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/record_20pts" android:textSize="13sp"
+                    android:textColor="@color/neon_cyan" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvRecord20" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/neon_gold"/>
+                <TextView android:id="@+id/tvRecord20Detail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_tertiary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Fastest Death (Glou) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="@color/glou_beer" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/record_fastest_death" android:textSize="13sp"
+                    android:textColor="@color/glou_beer" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvRecordFastestDeath" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/neon_gold"/>
+                <TextView android:id="@+id/tvRecordFastestDeathDetail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_tertiary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Cash Accuracy -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeColor="@color/cash_red" app:strokeWidth="1dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/record_cash_accuracy" android:textSize="13sp"
+                    android:textColor="@color/cash_red" android:textStyle="bold"/>
+                <TextView android:id="@+id/tvRecordCashAccuracy" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="22sp"
+                    android:textStyle="bold" android:textColor="@color/neon_gold"/>
+                <TextView android:id="@+id/tvRecordCashAccuracyDetail" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textSize="12sp" android:textColor="@color/text_tertiary"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Back -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Retour"
+            android:textColor="@color/text_secondary"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>
